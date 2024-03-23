@@ -264,12 +264,11 @@ string tinh_value_x(string s, int mode){
                 q.push(st.top());
                 st.pop();
             }
-            // if(!st.empty()) st.pop();
-            // if(isspecial(st.top()) && !st.empty()){
-            //     q.push(st.top());
-            //     st.pop();
-            // }
             if(!st.empty()) st.pop();
+            if(st.top() == "abs" && !st.empty()){
+                q.push(st.top());
+                st.pop();
+            }
         }
         else if (*it == 'l' && *(it + 1) == 'n') {
             ++it;
@@ -478,12 +477,11 @@ void solve(string s, string value_x, int mode) {
                 q.push(st.top());
                 st.pop();
             }
-            // if(!st.empty()) st.pop();
-            // if(isspecial(st.top()) && !st.empty()){
-            //     q.push(st.top());
-            //     st.pop();
-            // }
             if(!st.empty()) st.pop();
+            if(st.top() == "abs" && !st.empty()){
+                q.push(st.top());
+                st.pop();
+            }
         }
         else if (*it == 'l' && *(it + 1) == 'n') {
             ++it;
